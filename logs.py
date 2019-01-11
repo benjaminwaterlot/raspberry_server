@@ -6,9 +6,11 @@
 #    By: bwaterlo <bwaterlo@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/01/08 19:11:04 by bwaterlo          #+#    #+#              #
-#    Updated: 2019/01/08 19:58:52 by bwaterlo         ###   ########.fr        #
+#    Updated: 2019/01/09 12:15:37 by bwaterlo         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
+
+from utils import is_debug
 
 # COLORS FOR PRINTING ERRORS
 class _colors:
@@ -33,6 +35,17 @@ def _print_warning(message):
 def _print_log(message):
 	print(_colors.OKGREEN + _colors.BOLD + "EVENT\n" + message + _colors.END)
 	return None
+
+def _print_debug(message):
+	print(_colors.OKBLUE + _colors.BOLD + "Debug // " + message + _colors.END)
+	return None
+
+def	debug(message):
+	if (is_debug):
+		_print_debug(message)
+
+def message(message):
+	return _colors.OKGREEN + message + _colors.END
 
 # ERRORS
 def invalid_response_body(response):
