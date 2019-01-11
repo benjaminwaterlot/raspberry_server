@@ -6,21 +6,23 @@
 #    By: bwaterlo <bwaterlo@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/01/08 19:11:00 by bwaterlo          #+#    #+#              #
-#    Updated: 2019/01/08 20:00:14 by bwaterlo         ###   ########.fr        #
+#    Updated: 2019/01/09 12:15:40 by bwaterlo         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 from flask import Flask
 import requests
+
 import stations
 import logs
+from logs import debug
 import endpoints
 
 app = Flask(__name__)
 
 def find_trains(departure, arrival, date):
-	# url = f"{endpoints['availability']}/{departure}/{arrival}/{date}/{date}/{other_options}"
 	url = endpoints.availability(departure, arrival, date)
+	debug("We will fetch this url : " + url)
 	response = requests.get(url)
 	return (trains_from_response(response))
 
@@ -41,15 +43,20 @@ def get_hours_from_trains(trains):
 		text += hour
 	return text
 
+@app.route('/home')
+def home():
+	return "Bonjour !"
+
 @app.route('/find/<depart>/<destination>/<date>')
 def get_availability(depart, destination, date):
+	debug("Starting the request processing.")
 	if (not all([depart, destination, date])):
 		return logs.bad_arguments(depart, destination, date)
 	depart_station = stations.find_station(depart)
 	destination_station = stations.find_station(destination)
 	if (not all([depart_station, destination_station])):
 		logs.bad_station(depart, destination)
-		return "BAD STATIONS!"
+		return logs.message("BAD STATIONS!")
 	trains = find_trains(depart_station, destination_station, date)
 	if (trains is None):
 		return "NOTHING FOUND!"
