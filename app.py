@@ -6,12 +6,13 @@
 #    By: bwaterlo <bwaterlo@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/01/08 19:11:00 by bwaterlo          #+#    #+#              #
-#    Updated: 2019/01/09 12:15:40 by bwaterlo         ###   ########.fr        #
+#    Updated: 2019/01/11 19:52:24 by bwaterlo         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 from flask import Flask
 import requests
+import trainline
 
 import stations
 import logs
@@ -43,9 +44,13 @@ def get_hours_from_trains(trains):
 		text += hour
 	return text
 
-@app.route('/home')
+@app.route('/')
 def home():
 	return "Bonjour !"
+
+@app.route('/test')
+def test():
+	return trainline.search()
 
 @app.route('/find/<depart>/<destination>/<date>')
 def get_availability(depart, destination, date):
