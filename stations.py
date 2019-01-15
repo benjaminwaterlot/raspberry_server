@@ -10,14 +10,19 @@
 #                                                                              #
 # **************************************************************************** #
 
-stations_db = {
-	'PARIS': 'FRPAR',
-	'CHAMBERY': 'FRCMF',
-}
+# stations_db = {
+# 	'PARIS': 'FRPAR',
+# 	'CHAMBERY': 'FRCMF',
+# }
 
-def find_station(station):
-	station_uppercase = str.upper(station)
-	if (station_uppercase in stations_db):
-		return stations_db[station_uppercase]
-	else:
-		return None
+# def find_station(station):
+# 	station_uppercase = str.upper(station)
+# 	if (station_uppercase in stations_db):
+# 		return stations_db[station_uppercase]
+# 	else:
+# 		return None
+
+stations_db = {
+	"PARIS": "4916",
+	"CHAMBERY": "1339",
+}
