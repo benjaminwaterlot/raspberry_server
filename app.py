@@ -6,11 +6,12 @@
 #    By: bwaterlo <bwaterlo@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/01/08 19:11:00 by bwaterlo          #+#    #+#              #
-#    Updated: 2019/01/16 09:51:05 by bwaterlo         ###   ########.fr        #
+#    Updated: 2019/01/16 10:21:37 by bwaterlo         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-from datetime import datetime, date, time
+# from datetime import datetime, date, time
+import datetime as dt
 import re
 
 from flask import Flask
@@ -23,9 +24,13 @@ from stations import stations_db
 
 app = Flask(__name__)
 
+@app.before_first_request
+def startup():
+	logs.message("SERVER LAUNCHED !")
+
 def get_session_headers(session):
 	session_headers = {
-		'x-ct-timestamp': str(datetime.datetime.combine(time.time()),
+		'x-ct-timestamp': str(dt.time()),
 		"accept-language": "fr-FR,fr;q=0.8",
 		"authorization": "Token token=\"bn1jmsKj7-EzsyRrx4bt\"",
 		"x-ct-client-id": "91f690ff-8005-4203-9145-91567ca4a656",
@@ -46,8 +51,8 @@ def refine_query(depart, arrival, date, start, end):
 	query['depart'] = depart if (depart and depart in stations_db) else logs.bad_arguments(depart, arrival, date)
 	query['arrival'] = arrival if (arrival and arrival in stations_db) else logs.bad_arguments(depart, arrival, date)
 
-	if (datetime.date.fromisoformat(date)):
-		query['date'] = datetime.date.fromisoformat(date)
+	if (dt.date.fromisoformat(date)):
+		query['date'] = dt.date.fromisoformat(date)
 	else:
 		raise ValueError('A very specific bad thing happened.')
 

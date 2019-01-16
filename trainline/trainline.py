@@ -6,7 +6,7 @@
 #    By: bwaterlo <bwaterlo@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/01/15 10:37:06 by bwaterlo          #+#    #+#              #
-#    Updated: 2019/01/15 15:22:26 by bwaterlo         ###   ########.fr        #
+#    Updated: 2019/01/16 10:28:54 by bwaterlo         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ import random
 import json
 
 import requests
-import datetime
+import datetime as dt
 
 import logs
 from stations import stations_db
@@ -29,8 +29,9 @@ def get_search_headers():
 	return search_headers
 
 def get_search_body(params):
+	departure_date = dt.datetime.combine(params['date'], dt.time(params['start']))
 	search_body = {
-		"departure_date": str(params['date']),
+		"departure_date": str(departure_date),
 		"return_date": None,
 		"cuis": {},
 		"systems": ["sncf"],
@@ -57,7 +58,7 @@ def format_result(hours):
 	for hour in hours:
 		array += hour[11:16]
 		array += '\n'
-	return f"TGVMAX found : \n{result.join(array)}"
+	return result.join(array)
 
 def save_to_logs(trains_all, trains_tgvmax):
 	logs.debug("Saving the results to disk")
@@ -68,8 +69,9 @@ def save_to_logs(trains_all, trains_tgvmax):
 	trains_tgvmax_file.write(json.dumps(trains_tgvmax))
 	trains_tgvmax_file.close()
 
-def log_trains(trains):
-	for train in trains:
+def log_trains(trains_all, trains_tgvmax):
+	logs.message(f"{len(trains_all)} TRAINS FOUND.")
+	for train in trains_tgvmax:
 		logs.message(f"> {train['departure_date']} for {str(train['cents'] / 100)}€.")
 
 def search(session, params):
@@ -79,11 +81,12 @@ def search(session, params):
 		trains_all = search_response.json()['folders']
 		trains_tgvmax = [train for train in trains_all if train['cents'] == 0]
 		keep_hours = [train['departure_date'] for train in trains_tgvmax]
-		log_trains(trains_all)
+		log_trains(trains_all, trains_tgvmax)
 		save_to_logs(trains_all, trains_tgvmax)
 		return format_result(keep_hours)
 	result = ""
 	while params['start'] < params['end']:
 		result += launch_search(session, params)
-		params['start'] += 2
-	return result
+		if params['start'] >= 20: break
+		params['start'] += 3
+	return f"TGVMAX found: \n{result}" if result else "NOTHING!\n"
