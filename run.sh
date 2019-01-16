@@ -1,0 +1,1 @@
+export FLASK_DEBUG=1 && export FLASK_URL="http://127.0.0.1:5000/test" && pipenv run flask run

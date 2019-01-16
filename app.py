@@ -6,64 +6,70 @@
 #    By: bwaterlo <bwaterlo@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/01/08 19:11:00 by bwaterlo          #+#    #+#              #
-#    Updated: 2019/01/11 19:52:24 by bwaterlo         ###   ########.fr        #
+#    Updated: 2019/01/16 09:51:05 by bwaterlo         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
+from datetime import datetime, date, time
+import re
+
 from flask import Flask
 import requests
-import trainline
 
-import stations
-import logs
 from logs import debug
-import endpoints
+import logs
+import trainline.trainline as trainline
+from stations import stations_db
 
 app = Flask(__name__)
 
-def find_trains(departure, arrival, date):
-	url = endpoints.availability(departure, arrival, date)
-	debug("We will fetch this url : " + url)
-	response = requests.get(url)
-	return (trains_from_response(response))
+def get_session_headers(session):
+	session_headers = {
+		'x-ct-timestamp': str(datetime.datetime.combine(time.time()),
+		"accept-language": "fr-FR,fr;q=0.8",
+		"authorization": "Token token=\"bn1jmsKj7-EzsyRrx4bt\"",
+		"x-ct-client-id": "91f690ff-8005-4203-9145-91567ca4a656",
+		"x-ct-version": "8381c2c803382d9064fdd08cf188cf28488da811",
+		"x-ct-locale": "fr",
+		"x-user-agent": "CaptainTrain/1546957175(web) (Ember 3.4.6)",
+		"x-requested-with": "XMLHttpRequest",
+		"x-not-a-bot": "i-am-human",
+		"user-agent": 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',
+		"referer": "https://www.trainline.eu/search",
+		"authority": 'www.trainline.eu',
+	}
+	session.headers.update(session_headers)
+	return (session)
 
-def trains_from_response(response):
-	if (response.status_code != 200):
-		return logs.invalid_response_status(response)
-	trains = response.json()[0]
-	if (trains is None or 'price' not in trains):
-		return logs.invalid_response_body(response)
-	if (trains['price'] != 0):
-		return logs.no_trains_found(response)
-	return (trains)
+def refine_query(depart, arrival, date, start, end):
+	query = {}
+	query['depart'] = depart if (depart and depart in stations_db) else logs.bad_arguments(depart, arrival, date)
+	query['arrival'] = arrival if (arrival and arrival in stations_db) else logs.bad_arguments(depart, arrival, date)
 
-def get_hours_from_trains(trains):
-	text = ""
-	for hour in trains['hours']:
-		text += "\n==============================\n"
-		text += hour
-	return text
+	if (datetime.date.fromisoformat(date)):
+		query['date'] = datetime.date.fromisoformat(date)
+	else:
+		raise ValueError('A very specific bad thing happened.')
+
+	for time in [start, end]:
+		if (not int(time) or not (0 <= int(time) <= 24)):
+			raise ValueError('Error in the start or end values, should be ints.')
+	if (int(start) >= int(end)):
+		raise ValueError('You entered a bigger hour end than hour start, moron.')
+
+	query['start'] = int(start)
+	query['end'] = int(end)
+	if (query['start'] > query['end']):
+		raise ValueError('You entered a bigger hour end than hour start, moron.')
+	return query
 
 @app.route('/')
 def home():
 	return "Bonjour !"
 
-@app.route('/test')
-def test():
-	return trainline.search()
-
-@app.route('/find/<depart>/<destination>/<date>')
-def get_availability(depart, destination, date):
-	debug("Starting the request processing.")
-	if (not all([depart, destination, date])):
-		return logs.bad_arguments(depart, destination, date)
-	depart_station = stations.find_station(depart)
-	destination_station = stations.find_station(destination)
-	if (not all([depart_station, destination_station])):
-		logs.bad_station(depart, destination)
-		return logs.message("BAD STATIONS!")
-	trains = find_trains(depart_station, destination_station, date)
-	if (trains is None):
-		return "NOTHING FOUND!"
-	logs.trains_found(trains)
-	return f"For the {depart_station} - {destination_station} : {get_hours_from_trains(trains)}"
+@app.route('/<depart>/<arrival>/<date>/<start>/<end>')
+def test(depart = None, arrival = None, date = None, start = '08', end = '22'):
+	params = refine_query(depart, arrival, date, start, end)
+	session = requests.Session()
+	session = get_session_headers(session)
+	return trainline.search(session, params)

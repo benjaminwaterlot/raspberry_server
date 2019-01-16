@@ -6,7 +6,7 @@
 #    By: bwaterlo <bwaterlo@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/01/08 19:11:04 by bwaterlo          #+#    #+#              #
-#    Updated: 2019/01/09 12:15:37 by bwaterlo         ###   ########.fr        #
+#    Updated: 2019/01/15 10:40:09 by bwaterlo         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -45,7 +45,8 @@ def	debug(message):
 		_print_debug(message)
 
 def message(message):
-	return _colors.OKGREEN + message + _colors.END
+	print(_colors.OKGREEN + message + _colors.END)
+	return None
 
 # ERRORS
 def invalid_response_body(response):
