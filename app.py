@@ -59,9 +59,6 @@ def refine_query(depart, arrival, date, start, end):
 	for time in [start, end]:
 		if (not int(time) or not (0 <= int(time) <= 24)):
 			raise ValueError('Error in the start or end values, should be ints.')
-	if (int(start) >= int(end)):
-		raise ValueError('You entered a bigger hour end than hour start, moron.')
-
 	query['start'] = int(start)
 	query['end'] = int(end)
 	if (query['start'] > query['end']):

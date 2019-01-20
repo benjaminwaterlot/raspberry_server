@@ -69,8 +69,10 @@ def save_to_logs(trains_all, trains_tgvmax):
 	trains_tgvmax_file.write(json.dumps(trains_tgvmax))
 	trains_tgvmax_file.close()
 
-def log_trains(trains_all, trains_tgvmax):
+def log_trains(trains_all, trains_tgvmax, trains_buyable):
 	logs.message(f"{len(trains_all)} TRAINS FOUND.")
+	logs.message(f"{len(trains_tgvmax)} TGVMAX FOUND.")
+	logs.message(f"{len(trains_buyable)} AVAILABLE TGVMAX FOUND.")
 	for train in trains_tgvmax:
 		logs.message(f"> {train['departure_date']} for {str(train['cents'] / 100)}€.")
 
@@ -80,8 +82,9 @@ def search(session, params):
 		search_response.raise_for_status()
 		trains_all = search_response.json()['folders']
 		trains_tgvmax = [train for train in trains_all if train['cents'] == 0]
-		keep_hours = [train['departure_date'] for train in trains_tgvmax]
-		log_trains(trains_all, trains_tgvmax)
+		trains_buyable = [train for train in trains_tgvmax if train['is_sellable'] == True]
+		keep_hours = [train['departure_date'] for train in trains_buyable]
+		log_trains(trains_all, trains_tgvmax, trains_buyable)
 		save_to_logs(trains_all, trains_tgvmax)
 		return format_result(keep_hours)
 	result = ""
