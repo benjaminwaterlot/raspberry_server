@@ -2,6 +2,7 @@ from fbchat import Client, log, Message
 import time
 import random
 import json
+import requests
 
 # email = "benjiw93@hotmail.fr"
 # mdp = "iamjarvis"
@@ -20,6 +21,7 @@ class EchoBot(Client):
 		if message_object.text.find("exit") is not -1:
 			self.send(Message(text='Je vais dormir !'), thread_id=thread_id, thread_type=thread_type)
 			client.listening = False
+			return
 		if str.upper(message_object.text).find(str.upper("jarvis")) >= 0:
 			self.send(Message(text='JARVIS !'), thread_id=thread_id, thread_type=thread_type)
 		else:

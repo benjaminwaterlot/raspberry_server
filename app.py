@@ -6,21 +6,21 @@
 #    By: bwaterlo <bwaterlo@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/01/08 19:11:00 by bwaterlo          #+#    #+#              #
-#    Updated: 2019/01/16 10:21:37 by bwaterlo         ###   ########.fr        #
+#    Updated: 2019/01/21 17:16:57 by bwaterlo         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-# from datetime import datetime, date, time
 import datetime as dt
 import re
 
-from flask import Flask
+from flask import Flask, request
 import requests
 
 from logs import debug
 import logs
 import trainline.trainline as trainline
 from stations import stations_db
+import parser
 
 app = Flask(__name__)
 
@@ -68,6 +68,18 @@ def refine_query(depart, arrival, date, start, end):
 @app.route('/')
 def home():
 	return "Bonjour !"
+
+@app.route('/bot')
+def handle_bot_message():
+	session = requests.Session()
+	session = get_session_headers(session)
+	request_body = request.get_json()
+	if not request_body:
+		return "ERROR IN PARSER, BRO"
+	query = parser.parser(request.get_json())
+	if query['type'] == 'search':
+		return trainline.search(session, query)
+	return "Error in parser"
 
 @app.route('/<depart>/<arrival>/<date>/<start>/<end>')
 def test(depart = None, arrival = None, date = None, start = '08', end = '22'):
