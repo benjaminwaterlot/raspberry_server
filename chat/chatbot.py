@@ -10,14 +10,19 @@ import json
 # mdp = "iamjarvis"
 # uid = 1554146637
 
-prev_cookies_file = open("chat/cookies.json", "r+")
-prev_cookies = prev_cookies_file.read()
-if prev_cookies == "":
-	prev_cookies = None
-else:
-	prev_cookies = json.loads(prev_cookies)
+with open('chat/cookies.json') as cookies_file:
+	prev_cookies = json.load(cookies_file)
+print("PREVIOUS COOKIES : ")
 print(prev_cookies)
-prev_cookies_file.close()
+user_agent = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.90 Safari/537.36"
+# prev_cookies_file = open("chat/cookies.json", "r+")
+# prev_cookies = prev_cookies_file.read()
+# if prev_cookies == "":
+# 	prev_cookies = None
+# else:
+# 	prev_cookies = json.loads(prev_cookies)
+# print(prev_cookies)
+# prev_cookies_file.close()
 
 class EchoBot(Client):
 	def onMessage(self, author_id, message_object, thread_id, thread_type, **kwargs):
@@ -39,7 +44,7 @@ class EchoBot(Client):
 		cookies.write(json.dumps(self.getSession()))
 		cookies.close()
 
-client = EchoBot("benjiw93@hotmail.fr", "iamjarvis", session_cookies=prev_cookies)
+client = EchoBot("benjiw93@hotmail.fr", "iamjarvis", session_cookies=prev_cookies, user_agent=user_agent)
 client.listen()
 print("<JARVIS> Je vais me déconnecter.")
 client.logout()
