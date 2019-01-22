@@ -79,7 +79,6 @@ def handle_bot_message():
 	query = parser.parser(request.get_json())
 	if query['type'] == 'search':
 		return trainline.search(session, query)
-	return "Error in parser"
 
 @app.route('/<depart>/<arrival>/<date>/<start>/<end>')
 def test(depart = None, arrival = None, date = None, start = '08', end = '22'):

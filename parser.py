@@ -10,8 +10,9 @@
 #                                                                              #
 # **************************************************************************** #
 
-def parser(query):
+def parser(body):
 	query = {
-		type: 'search',
+		'type': 'search',
+		'body': body,
 	}
 	return query
