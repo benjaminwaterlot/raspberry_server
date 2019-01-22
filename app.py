@@ -6,7 +6,7 @@
 #    By: bwaterlo <bwaterlo@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/01/22 11:56:22 by bwaterlo          #+#    #+#              #
-#    Updated: 2019/01/22 16:55:36 by bwaterlo         ###   ########.fr        #
+#    Updated: 2019/01/22 19:50:17 by bwaterlo         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,6 +14,7 @@ from flask import Flask, request
 import requests
 import json
 import trainline.trainline as trainline
+import datetime as dt
 
 app = Flask(__name__)
 
@@ -54,12 +55,34 @@ def message_from_jarvis():
 	body = request.get_json()
 	print("THIS IS THE REQUEST RECEIVED :")
 	print(body)
+	with open('logs/request_from_dialogflow.json', 'w+') as log:
+		log.write(json.dumps(body))
 	query = body['queryResult']
-	params = {}
 	if query['intent']['displayName'] == 'search_train':
-		params['']
-
-	# TODO : TRANSFERER LES PARAMS DEPUIS LA QUERY VERS PARAMS POUR FAIRE LA REQUETE TRAINLINE
-	response = {}
-	response['fulfillmentText'] = trainline.search(params)
-	return json.dumps(response)
+		query_params = query['parameters']
+		params = {
+			'date': dt.datetime.fromisoformat(query_params['date']).date(),
+			'depart': query_params['from'],
+			'arrival': query_params['to'],
+			'start': 18,
+			'end': 23,
+			'time_start': dt.datetime.fromisoformat(query_params['time_period']['startTime']).time(),
+			'time_end': dt.datetime.fromisoformat(query_params['time_period']['endTime']).time(),
+		}
+		response = {}
+		response['fulfillmentText'] = trainline.search(params)
+		# response['fulfillmentMessages'] = [{'messages': [{
+		# 		"buttons": [
+		# 		{
+		# 			"postback": "Card Link URL or text",
+		# 			"text": "Card Link Title"
+		# 		}
+		# 		],
+		# 		"imageUrl": "http://urltoimage.com",
+		# 		"platform": "facebook",
+		# 		"subtitle": "Card Subtitle",
+		# 		"title": "Card Title",
+		# 		"type": 1
+		# 	}]}]
+		return json.dumps(response)
+	else: exit()
