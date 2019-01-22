@@ -6,7 +6,7 @@
 #    By: bwaterlo <bwaterlo@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/01/15 10:37:06 by bwaterlo          #+#    #+#              #
-#    Updated: 2019/01/16 10:28:54 by bwaterlo         ###   ########.fr        #
+#    Updated: 2019/01/22 16:47:24 by bwaterlo         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -76,9 +76,9 @@ def log_trains(trains_all, trains_tgvmax, trains_buyable):
 	for train in trains_tgvmax:
 		logs.message(f"> {train['departure_date']} for {str(train['cents'] / 100)}€.")
 
-def search(session, params):
-	def launch_search(session, params):
-		search_response = session.post(search_url, json=get_search_body(params), headers=get_search_headers())
+def search(params):
+	def launch_search(params):
+		search_response = requests.post(search_url, json=get_search_body(params), headers=get_search_headers())
 		search_response.raise_for_status()
 		trains_all = search_response.json()['folders']
 		trains_tgvmax = [train for train in trains_all if train['cents'] == 0]
@@ -89,7 +89,7 @@ def search(session, params):
 		return format_result(keep_hours)
 	result = ""
 	while params['start'] < params['end']:
-		result += launch_search(session, params)
+		result += launch_search(params)
 		if params['start'] >= 20: break
 		params['start'] += 3
 	return f"TGVMAX found: \n{result}" if result else "NOTHING!\n"
