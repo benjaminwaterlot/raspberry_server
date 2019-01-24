@@ -6,7 +6,7 @@
 #    By: bwaterlo <bwaterlo@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/01/22 11:56:22 by bwaterlo          #+#    #+#              #
-#    Updated: 2019/01/23 09:41:09 by bwaterlo         ###   ########.fr        #
+#    Updated: 2019/01/24 11:25:30 by bwaterlo         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -69,8 +69,41 @@ def message_from_jarvis():
 			'time_start': dt.datetime.fromisoformat(query_params['time_period']['startTime']).time(),
 			'time_end': dt.datetime.fromisoformat(query_params['time_period']['endTime']).time(),
 		}
-		response = {}
-		response['fulfillmentText'] = trainline.search(params)
+		# response = {}
+		# response['fulfillmentText'] = trainline.search(params)
+		response = {
+			"fulfillmentMessages": [
+			{
+				"platform": "FACEBOOK",
+				"card": {
+					"title": "Title: this is a title",
+					"subtitle": "This is an subtitle.  Text can include unicode characters including emoji 📱.",
+					"imageUri": "https://developers.google.com/actions/images/badges/XPM_BADGING_GoogleAssistant_VER.png",
+					"buttons": [
+					{
+						"text": "This is a button",
+						"postback": "https://assistant.google.com/"
+					}
+					]
+				}
+			},
+			{
+			"platform": "FACEBOOK",
+			"card": {
+				"title": "Title: this is a title",
+				"subtitle": "This is an subtitle.  Text can include unicode characters including emoji 📱.",
+				"imageUri": "https://developers.google.com/actions/images/badges/XPM_BADGING_GoogleAssistant_VER.png",
+				"buttons": [
+				{
+					"text": "This is a button",
+					"postback": "https://assistant.google.com/"
+				}
+				]
+			}
+			}
+		]
+		}
+
 		# response['fulfillmentMessages'] = [{'messages': [{
 		# 		"buttons": [
 		# 		{
