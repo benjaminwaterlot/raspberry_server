@@ -1,0 +1,1989 @@
+[
+	{
+		"value": "AEROPORT CDG2 TGV ROISSY",
+		"synonyms": [
+			"AEROPORT CDG2 TGV ROISSY",
+			"Aeroport cdg2 tgv roissy",
+			"aeroport cdg2 tgv roissy",
+			"AEROPORT"
+		]
+	},
+	{
+		"value": "AGDE",
+		"synonyms": [
+			"AGDE",
+			"Agde",
+			"agde"
+		]
+	},
+	{
+		"value": "AGEN",
+		"synonyms": [
+			"AGEN",
+			"Agen",
+			"agen"
+		]
+	},
+	{
+		"value": "AIME LA PLAGNE",
+		"synonyms": [
+			"AIME LA PLAGNE",
+			"Aime la plagne",
+			"aime la plagne",
+			"AIME"
+		]
+	},
+	{
+		"value": "AIX EN PROVENCE TGV",
+		"synonyms": [
+			"AIX EN PROVENCE TGV",
+			"Aix en provence tgv",
+			"aix en provence tgv"
+		]
+	},
+	{
+		"value": "AIX LES BAINS LE REVARD",
+		"synonyms": [
+			"AIX LES BAINS LE REVARD",
+			"Aix les bains le revard",
+			"aix les bains le revard"
+		]
+	},
+	{
+		"value": "ALBERTVILLE",
+		"synonyms": [
+			"ALBERTVILLE",
+			"Albertville",
+			"albertville"
+		]
+	},
+	{
+		"value": "ANCENIS",
+		"synonyms": [
+			"ANCENIS",
+			"Ancenis",
+			"ancenis"
+		]
+	},
+	{
+		"value": "ANDORRE",
+		"synonyms": [
+			"ANDORRE",
+			"Andorre",
+			"andorre"
+		]
+	},
+	{
+		"value": "ANGERS ST LAUD",
+		"synonyms": [
+			"ANGERS ST LAUD",
+			"Angers st laud",
+			"angers st laud",
+			"ANGERS"
+		]
+	},
+	{
+		"value": "ANGOULEME",
+		"synonyms": [
+			"ANGOULEME",
+			"Angouleme",
+			"angouleme"
+		]
+	},
+	{
+		"value": "ANNECY",
+		"synonyms": [
+			"ANNECY",
+			"Annecy",
+			"annecy"
+		]
+	},
+	{
+		"value": "ANNEMASSE",
+		"synonyms": [
+			"ANNEMASSE",
+			"Annemasse",
+			"annemasse"
+		]
+	},
+	{
+		"value": "ANTIBES",
+		"synonyms": [
+			"ANTIBES",
+			"Antibes",
+			"antibes"
+		]
+	},
+	{
+		"value": "ARCACHON",
+		"synonyms": [
+			"ARCACHON",
+			"Arcachon",
+			"arcachon"
+		]
+	},
+	{
+		"value": "ARGELES SUR MER",
+		"synonyms": [
+			"ARGELES SUR MER",
+			"Argeles sur mer",
+			"argeles sur mer",
+			"ARGELES"
+		]
+	},
+	{
+		"value": "ARGENTON SUR CREUSE",
+		"synonyms": [
+			"ARGENTON SUR CREUSE",
+			"Argenton sur creuse",
+			"argenton sur creuse",
+			"ARGENTON"
+		]
+	},
+	{
+		"value": "ARLES",
+		"synonyms": [
+			"ARLES",
+			"Arles",
+			"arles"
+		]
+	},
+	{
+		"value": "ARRAS",
+		"synonyms": [
+			"ARRAS",
+			"Arras",
+			"arras"
+		]
+	},
+	{
+		"value": "ASSIER",
+		"synonyms": [
+			"ASSIER",
+			"Assier",
+			"assier"
+		]
+	},
+	{
+		"value": "AUBIN",
+		"synonyms": [
+			"AUBIN",
+			"Aubin",
+			"aubin"
+		]
+	},
+	{
+		"value": "AURAY",
+		"synonyms": [
+			"AURAY",
+			"Auray",
+			"auray"
+		]
+	},
+	{
+		"value": "AUTERIVE",
+		"synonyms": [
+			"AUTERIVE",
+			"Auterive",
+			"auterive"
+		]
+	},
+	{
+		"value": "AVIGNON CENTRE",
+		"synonyms": [
+			"AVIGNON CENTRE",
+			"Avignon centre",
+			"avignon centre",
+			"AVIGNON"
+		]
+	},
+	{
+		"value": "AVIGNON TGV",
+		"synonyms": [
+			"AVIGNON TGV",
+			"Avignon tgv",
+			"avignon tgv",
+			"AVIGNON"
+		]
+	},
+	{
+		"value": "AX LES THERMES",
+		"synonyms": [
+			"AX LES THERMES",
+			"Ax les thermes",
+			"ax les thermes"
+		]
+	},
+	{
+		"value": "BANYULS SUR MER",
+		"synonyms": [
+			"BANYULS SUR MER",
+			"Banyuls sur mer",
+			"banyuls sur mer",
+			"BANYULS"
+		]
+	},
+	{
+		"value": "BAR LE DUC",
+		"synonyms": [
+			"BAR LE DUC",
+			"Bar le duc",
+			"bar le duc"
+		]
+	},
+	{
+		"value": "BAYONNE",
+		"synonyms": [
+			"BAYONNE",
+			"Bayonne",
+			"bayonne"
+		]
+	},
+	{
+		"value": "BEAUNE",
+		"synonyms": [
+			"BEAUNE",
+			"Beaune",
+			"beaune"
+		]
+	},
+	{
+		"value": "BELFORT MONTBELIARD TGV",
+		"synonyms": [
+			"BELFORT MONTBELIARD TGV",
+			"Belfort montbeliard tgv",
+			"belfort montbeliard tgv",
+			"BELFORT"
+		]
+	},
+	{
+		"value": "BELLEGARDE",
+		"synonyms": [
+			"BELLEGARDE",
+			"Bellegarde",
+			"bellegarde"
+		]
+	},
+	{
+		"value": "BESANCON Franche Comt\u00e9 TGV",
+		"synonyms": [
+			"BESANCON Franche Comt\u00e9 TGV",
+			"Besancon franche comt\u00e9 tgv",
+			"besancon franche comt\u00e9 tgv",
+			"BESANCON"
+		]
+	},
+	{
+		"value": "BESANCON VIOTTE",
+		"synonyms": [
+			"BESANCON VIOTTE",
+			"Besancon viotte",
+			"besancon viotte",
+			"BESANCON"
+		]
+	},
+	{
+		"value": "BETHUNE",
+		"synonyms": [
+			"BETHUNE",
+			"Bethune",
+			"bethune"
+		]
+	},
+	{
+		"value": "BEZIERS",
+		"synonyms": [
+			"BEZIERS",
+			"Beziers",
+			"beziers"
+		]
+	},
+	{
+		"value": "BIARRITZ",
+		"synonyms": [
+			"BIARRITZ",
+			"Biarritz",
+			"biarritz"
+		]
+	},
+	{
+		"value": "BORDEAUX ST JEAN",
+		"synonyms": [
+			"BORDEAUX ST JEAN",
+			"Bordeaux st jean",
+			"bordeaux st jean",
+			"BORDEAUX"
+		]
+	},
+	{
+		"value": "BOULOGNE VILLE",
+		"synonyms": [
+			"BOULOGNE VILLE",
+			"Boulogne ville",
+			"boulogne ville",
+			"BOULOGNE"
+		]
+	},
+	{
+		"value": "BOURG EN BRESSE",
+		"synonyms": [
+			"BOURG EN BRESSE",
+			"Bourg en bresse",
+			"bourg en bresse",
+			"BOURG"
+		]
+	},
+	{
+		"value": "BOURG ST MAURICE",
+		"synonyms": [
+			"BOURG ST MAURICE",
+			"Bourg st maurice",
+			"bourg st maurice",
+			"BOURG"
+		]
+	},
+	{
+		"value": "BREST",
+		"synonyms": [
+			"BREST",
+			"Brest",
+			"brest"
+		]
+	},
+	{
+		"value": "BRIANCON",
+		"synonyms": [
+			"BRIANCON",
+			"Briancon",
+			"briancon"
+		]
+	},
+	{
+		"value": "BRIVE LA GAILLARDE",
+		"synonyms": [
+			"BRIVE LA GAILLARDE",
+			"Brive la gaillarde",
+			"brive la gaillarde",
+			"BRIVE"
+		]
+	},
+	{
+		"value": "CAHORS",
+		"synonyms": [
+			"CAHORS",
+			"Cahors",
+			"cahors"
+		]
+	},
+	{
+		"value": "CALAIS FRETHUN",
+		"synonyms": [
+			"CALAIS FRETHUN",
+			"Calais frethun",
+			"calais frethun",
+			"CALAIS"
+		]
+	},
+	{
+		"value": "CALAIS VILLE",
+		"synonyms": [
+			"CALAIS VILLE",
+			"Calais ville",
+			"calais ville",
+			"CALAIS"
+		]
+	},
+	{
+		"value": "CANNES",
+		"synonyms": [
+			"CANNES",
+			"Cannes",
+			"cannes"
+		]
+	},
+	{
+		"value": "CAPDENAC",
+		"synonyms": [
+			"CAPDENAC",
+			"Capdenac",
+			"capdenac"
+		]
+	},
+	{
+		"value": "CARCASSONNE",
+		"synonyms": [
+			"CARCASSONNE",
+			"Carcassonne",
+			"carcassonne"
+		]
+	},
+	{
+		"value": "CASTELNAUDARY",
+		"synonyms": [
+			"CASTELNAUDARY",
+			"Castelnaudary",
+			"castelnaudary"
+		]
+	},
+	{
+		"value": "CAUSSADE TARN ET GARONNE",
+		"synonyms": [
+			"CAUSSADE TARN ET GARONNE",
+			"Caussade tarn et garonne",
+			"caussade tarn et garonne",
+			"CAUSSADE"
+		]
+	},
+	{
+		"value": "CERBERE",
+		"synonyms": [
+			"CERBERE",
+			"Cerbere",
+			"cerbere"
+		]
+	},
+	{
+		"value": "CHALON SUR SAONE",
+		"synonyms": [
+			"CHALON SUR SAONE",
+			"Chalon sur saone",
+			"chalon sur saone",
+			"CHALON"
+		]
+	},
+	{
+		"value": "CHALONS EN CHAMPAGNE",
+		"synonyms": [
+			"CHALONS EN CHAMPAGNE",
+			"Chalons en champagne",
+			"chalons en champagne",
+			"CHALONS"
+		]
+	},
+	{
+		"value": "CHAMBERY CHALLES LES EAUX",
+		"synonyms": [
+			"CHAMBERY CHALLES LES EAUX",
+			"Chambery challes les eaux",
+			"chambery challes les eaux",
+			"CHAMBERY",
+			"Chambéry",
+			"chambery"
+		]
+	},
+	{
+		"value": "CHAMPAGNE ARDENNE",
+		"synonyms": [
+			"CHAMPAGNE ARDENNE",
+			"Champagne ardenne",
+			"champagne ardenne",
+			"CHAMPAGNE"
+		]
+	},
+	{
+		"value": "CHARLEVILLE MEZIERES",
+		"synonyms": [
+			"CHARLEVILLE MEZIERES",
+			"Charleville mezieres",
+			"charleville mezieres",
+			"CHARLEVILLE"
+		]
+	},
+	{
+		"value": "CHATEAUROUX",
+		"synonyms": [
+			"CHATEAUROUX",
+			"Chateauroux",
+			"chateauroux"
+		]
+	},
+	{
+		"value": "CHATELLERAULT",
+		"synonyms": [
+			"CHATELLERAULT",
+			"Chatellerault",
+			"chatellerault"
+		]
+	},
+	{
+		"value": "CHORGES",
+		"synonyms": [
+			"CHORGES",
+			"Chorges",
+			"chorges"
+		]
+	},
+	{
+		"value": "CLERMONT FERRAND",
+		"synonyms": [
+			"CLERMONT FERRAND",
+			"Clermont ferrand",
+			"clermont ferrand",
+			"CLERMONT"
+		]
+	},
+	{
+		"value": "CLUSES 74",
+		"synonyms": [
+			"CLUSES 74",
+			"Cluses 74",
+			"cluses 74",
+			"CLUSES"
+		]
+	},
+	{
+		"value": "COLLIOURE",
+		"synonyms": [
+			"COLLIOURE",
+			"Collioure",
+			"collioure"
+		]
+	},
+	{
+		"value": "COLMAR",
+		"synonyms": [
+			"COLMAR",
+			"Colmar",
+			"colmar"
+		]
+	},
+	{
+		"value": "CORBIERES LES AUBRAIS ORLEANS",
+		"synonyms": [
+			"CORBIERES LES AUBRAIS ORLEANS",
+			"Corbieres les aubrais orleans",
+			"corbieres les aubrais orleans",
+			"CORBIERES"
+		]
+	},
+	{
+		"value": "CORBIERES VIERZON VILLE",
+		"synonyms": [
+			"CORBIERES VIERZON VILLE",
+			"Corbieres vierzon ville",
+			"corbieres vierzon ville",
+			"CORBIERES"
+		]
+	},
+	{
+		"value": "CRANSAC",
+		"synonyms": [
+			"CRANSAC",
+			"Cransac",
+			"cransac"
+		]
+	},
+	{
+		"value": "CREST",
+		"synonyms": [
+			"CREST",
+			"Crest",
+			"crest"
+		]
+	},
+	{
+		"value": "CROIX WASQUEHAL",
+		"synonyms": [
+			"CROIX WASQUEHAL",
+			"Croix wasquehal",
+			"croix wasquehal",
+			"CROIX"
+		]
+	},
+	{
+		"value": "DAX",
+		"synonyms": [
+			"DAX",
+			"Dax",
+			"dax"
+		]
+	},
+	{
+		"value": "DIE",
+		"synonyms": [
+			"DIE",
+			"Die",
+			"die"
+		]
+	},
+	{
+		"value": "DIJON VILLE",
+		"synonyms": [
+			"DIJON VILLE",
+			"Dijon ville",
+			"dijon ville",
+			"DIJON"
+		]
+	},
+	{
+		"value": "DOL DE BRETAGNE",
+		"synonyms": [
+			"DOL DE BRETAGNE",
+			"Dol de bretagne",
+			"dol de bretagne"
+		]
+	},
+	{
+		"value": "DOLE VILLE",
+		"synonyms": [
+			"DOLE VILLE",
+			"Dole ville",
+			"dole ville",
+			"DOLE"
+		]
+	},
+	{
+		"value": "DOUAI",
+		"synonyms": [
+			"DOUAI",
+			"Douai",
+			"douai"
+		]
+	},
+	{
+		"value": "DUNKERQUE",
+		"synonyms": [
+			"DUNKERQUE",
+			"Dunkerque",
+			"dunkerque"
+		]
+	},
+	{
+		"value": "ELNE",
+		"synonyms": [
+			"ELNE",
+			"Elne",
+			"elne"
+		]
+	},
+	{
+		"value": "EMBRUN",
+		"synonyms": [
+			"EMBRUN",
+			"Embrun",
+			"embrun"
+		]
+	},
+	{
+		"value": "EPINAL",
+		"synonyms": [
+			"EPINAL",
+			"Epinal",
+			"epinal"
+		]
+	},
+	{
+		"value": "ETAPLES LE TOUQUET",
+		"synonyms": [
+			"ETAPLES LE TOUQUET",
+			"Etaples le touquet",
+			"etaples le touquet",
+			"ETAPLES"
+		]
+	},
+	{
+		"value": "EVIAN LES BAINS",
+		"synonyms": [
+			"EVIAN LES BAINS",
+			"Evian les bains",
+			"evian les bains",
+			"EVIAN"
+		]
+	},
+	{
+		"value": "FACTURE BIGANOS",
+		"synonyms": [
+			"FACTURE BIGANOS",
+			"Facture biganos",
+			"facture biganos",
+			"FACTURE"
+		]
+	},
+	{
+		"value": "FIGEAC",
+		"synonyms": [
+			"FIGEAC",
+			"Figeac",
+			"figeac"
+		]
+	},
+	{
+		"value": "FOIX",
+		"synonyms": [
+			"FOIX",
+			"Foix",
+			"foix"
+		]
+	},
+	{
+		"value": "FORBACH",
+		"synonyms": [
+			"FORBACH",
+			"Forbach",
+			"forbach"
+		]
+	},
+	{
+		"value": "FRASNE",
+		"synonyms": [
+			"FRASNE",
+			"Frasne",
+			"frasne"
+		]
+	},
+	{
+		"value": "FUTUROSCOPE",
+		"synonyms": [
+			"FUTUROSCOPE",
+			"Futuroscope",
+			"futuroscope"
+		]
+	},
+	{
+		"value": "GAP",
+		"synonyms": [
+			"GAP",
+			"Gap",
+			"gap"
+		]
+	},
+	{
+		"value": "GOURDON",
+		"synonyms": [
+			"GOURDON",
+			"Gourdon",
+			"gourdon"
+		]
+	},
+	{
+		"value": "GRAMAT",
+		"synonyms": [
+			"GRAMAT",
+			"Gramat",
+			"gramat"
+		]
+	},
+	{
+		"value": "GRENOBLE",
+		"synonyms": [
+			"GRENOBLE",
+			"Grenoble",
+			"grenoble"
+		]
+	},
+	{
+		"value": "GUINGAMP",
+		"synonyms": [
+			"GUINGAMP",
+			"Guingamp",
+			"guingamp"
+		]
+	},
+	{
+		"value": "HAZEBROUCK",
+		"synonyms": [
+			"HAZEBROUCK",
+			"Hazebrouck",
+			"hazebrouck"
+		]
+	},
+	{
+		"value": "HENDAYE",
+		"synonyms": [
+			"HENDAYE",
+			"Hendaye",
+			"hendaye"
+		]
+	},
+	{
+		"value": "HYERES",
+		"synonyms": [
+			"HYERES",
+			"Hyeres",
+			"hyeres"
+		]
+	},
+	{
+		"value": "ISSOUDUN",
+		"synonyms": [
+			"ISSOUDUN",
+			"Issoudun",
+			"issoudun"
+		]
+	},
+	{
+		"value": "LA BAULE ESCOUBLAC",
+		"synonyms": [
+			"LA BAULE ESCOUBLAC",
+			"La baule escoublac",
+			"la baule escoublac"
+		]
+	},
+	{
+		"value": "LA ROCHE SUR YON",
+		"synonyms": [
+			"LA ROCHE SUR YON",
+			"La roche sur yon",
+			"la roche sur yon"
+		]
+	},
+	{
+		"value": "LA ROCHELLE VILLE",
+		"synonyms": [
+			"LA ROCHELLE VILLE",
+			"La rochelle ville",
+			"la rochelle ville"
+		]
+	},
+	{
+		"value": "LA SOUTERRAINE",
+		"synonyms": [
+			"LA SOUTERRAINE",
+			"La souterraine",
+			"la souterraine"
+		]
+	},
+	{
+		"value": "LA TESTE",
+		"synonyms": [
+			"LA TESTE",
+			"La teste",
+			"la teste"
+		]
+	},
+	{
+		"value": "LAMBALLE",
+		"synonyms": [
+			"LAMBALLE",
+			"Lamballe",
+			"lamballe"
+		]
+	},
+	{
+		"value": "LANDERNEAU",
+		"synonyms": [
+			"LANDERNEAU",
+			"Landerneau",
+			"landerneau"
+		]
+	},
+	{
+		"value": "LANDRY",
+		"synonyms": [
+			"LANDRY",
+			"Landry",
+			"landry"
+		]
+	},
+	{
+		"value": "LANNION",
+		"synonyms": [
+			"LANNION",
+			"Lannion",
+			"lannion"
+		]
+	},
+	{
+		"value": "L'ARGENTIERE LES ECRINS",
+		"synonyms": [
+			"L'ARGENTIERE LES ECRINS",
+			"L'argentiere les ecrins",
+			"l'argentiere les ecrins",
+			"L'ARGENTIERE"
+		]
+	},
+	{
+		"value": "LATOUR DE CAROL ENVEITG",
+		"synonyms": [
+			"LATOUR DE CAROL ENVEITG",
+			"Latour de carol enveitg",
+			"latour de carol enveitg",
+			"LATOUR"
+		]
+	},
+	{
+		"value": "LAVAL",
+		"synonyms": [
+			"LAVAL",
+			"Laval",
+			"laval"
+		]
+	},
+	{
+		"value": "LE CREUSOT MONTCEAU MONTCHANIN",
+		"synonyms": [
+			"LE CREUSOT MONTCEAU MONTCHANIN",
+			"Le creusot montceau montchanin",
+			"le creusot montceau montchanin"
+		]
+	},
+	{
+		"value": "LE CROISIC",
+		"synonyms": [
+			"LE CROISIC",
+			"Le croisic",
+			"le croisic"
+		]
+	},
+	{
+		"value": "LE HAVRE",
+		"synonyms": [
+			"LE HAVRE",
+			"Le havre",
+			"le havre"
+		]
+	},
+	{
+		"value": "LE MANS",
+		"synonyms": [
+			"LE MANS",
+			"Le mans",
+			"le mans"
+		]
+	},
+	{
+		"value": "LE POULIGUEN",
+		"synonyms": [
+			"LE POULIGUEN",
+			"Le pouliguen",
+			"le pouliguen"
+		]
+	},
+	{
+		"value": "LENS",
+		"synonyms": [
+			"LENS",
+			"Lens",
+			"lens"
+		]
+	},
+	{
+		"value": "LES ARCS DRAGUIGNAN",
+		"synonyms": [
+			"LES ARCS DRAGUIGNAN",
+			"Les arcs draguignan",
+			"les arcs draguignan"
+		]
+	},
+	{
+		"value": "LES CABANNES",
+		"synonyms": [
+			"LES CABANNES",
+			"Les cabannes",
+			"les cabannes"
+		]
+	},
+	{
+		"value": "LES SABLES D'OLONNE",
+		"synonyms": [
+			"LES SABLES D'OLONNE",
+			"Les sables d'olonne",
+			"les sables d'olonne"
+		]
+	},
+	{
+		"value": "LEZIGNAN",
+		"synonyms": [
+			"LEZIGNAN",
+			"Lezignan",
+			"lezignan"
+		]
+	},
+	{
+		"value": "LIBOURNE",
+		"synonyms": [
+			"LIBOURNE",
+			"Libourne",
+			"libourne"
+		]
+	},
+	{
+		"value": "LILLE EUROPE",
+		"synonyms": [
+			"LILLE EUROPE",
+			"Lille europe",
+			"lille europe",
+			"LILLE"
+		]
+	},
+	{
+		"value": "LILLE FLANDRES",
+		"synonyms": [
+			"LILLE FLANDRES",
+			"Lille flandres",
+			"lille flandres",
+			"LILLE"
+		]
+	},
+	{
+		"value": "LIMOGES BENEDICTINS",
+		"synonyms": [
+			"LIMOGES BENEDICTINS",
+			"Limoges benedictins",
+			"limoges benedictins",
+			"LIMOGES"
+		]
+	},
+	{
+		"value": "LORIENT",
+		"synonyms": [
+			"LORIENT",
+			"Lorient",
+			"lorient"
+		]
+	},
+	{
+		"value": "LORRAINE TGV",
+		"synonyms": [
+			"LORRAINE TGV",
+			"Lorraine tgv",
+			"lorraine tgv",
+			"LORRAINE"
+		]
+	},
+	{
+		"value": "LOURDES",
+		"synonyms": [
+			"LOURDES",
+			"Lourdes",
+			"lourdes"
+		]
+	},
+	{
+		"value": "LUNEVILLE",
+		"synonyms": [
+			"LUNEVILLE",
+			"Luneville",
+			"luneville"
+		]
+	},
+	{
+		"value": "Luxembourg",
+		"synonyms": [
+			"Luxembourg",
+			"Luxembourg",
+			"luxembourg"
+		]
+	},
+	{
+		"value": "LYON",
+		"synonyms": [
+			"LYON",
+			"Lyon",
+			"lyon",
+			"LYON"
+		]
+	},
+	{
+		"value": "LYON ST EXUPERY",
+		"synonyms": [
+			"LYON ST EXUPERY",
+			"Lyon st exupery",
+			"lyon st exupery",
+			"LYON"
+		]
+	},
+	{
+		"value": "MACON LOCHE TGV",
+		"synonyms": [
+			"MACON LOCHE TGV",
+			"Macon loche tgv",
+			"macon loche tgv",
+			"MACON"
+		]
+	},
+	{
+		"value": "MACON VILLE",
+		"synonyms": [
+			"MACON VILLE",
+			"Macon ville",
+			"macon ville",
+			"MACON"
+		]
+	},
+	{
+		"value": "MANTES LA JOLIE",
+		"synonyms": [
+			"MANTES LA JOLIE",
+			"Mantes la jolie",
+			"mantes la jolie",
+			"MANTES"
+		]
+	},
+	{
+		"value": "MARMANDE",
+		"synonyms": [
+			"MARMANDE",
+			"Marmande",
+			"marmande"
+		]
+	},
+	{
+		"value": "MARNE LA VALLEE CHESSY",
+		"synonyms": [
+			"MARNE LA VALLEE CHESSY",
+			"Marne la vallee chessy",
+			"marne la vallee chessy",
+			"MARNE"
+		]
+	},
+	{
+		"value": "MARSEILLE ST CHARLES",
+		"synonyms": [
+			"MARSEILLE ST CHARLES",
+			"Marseille st charles",
+			"marseille st charles",
+			"MARSEILLE"
+		]
+	},
+	{
+		"value": "MASSY PALAISEAU",
+		"synonyms": [
+			"MASSY PALAISEAU",
+			"Massy palaiseau",
+			"massy palaiseau",
+			"MASSY"
+		]
+	},
+	{
+		"value": "MASSY TGV",
+		"synonyms": [
+			"MASSY TGV",
+			"Massy tgv",
+			"massy tgv",
+			"MASSY"
+		]
+	},
+	{
+		"value": "MENTON",
+		"synonyms": [
+			"MENTON",
+			"Menton",
+			"menton"
+		]
+	},
+	{
+		"value": "MERENS LES VALS",
+		"synonyms": [
+			"MERENS LES VALS",
+			"Merens les vals",
+			"merens les vals",
+			"MERENS"
+		]
+	},
+	{
+		"value": "METZ VILLE",
+		"synonyms": [
+			"METZ VILLE",
+			"Metz ville",
+			"metz ville",
+			"METZ"
+		]
+	},
+	{
+		"value": "MEUSE TGV",
+		"synonyms": [
+			"MEUSE TGV",
+			"Meuse tgv",
+			"meuse tgv",
+			"MEUSE"
+		]
+	},
+	{
+		"value": "MIRAMAS",
+		"synonyms": [
+			"MIRAMAS",
+			"Miramas",
+			"miramas"
+		]
+	},
+	{
+		"value": "MODANE",
+		"synonyms": [
+			"MODANE",
+			"Modane",
+			"modane"
+		]
+	},
+	{
+		"value": "MONACO MONTE CARLO",
+		"synonyms": [
+			"MONACO MONTE CARLO",
+			"Monaco monte carlo",
+			"monaco monte carlo",
+			"MONACO"
+		]
+	},
+	{
+		"value": "MONTAUBAN VILLE BOURBON",
+		"synonyms": [
+			"MONTAUBAN VILLE BOURBON",
+			"Montauban ville bourbon",
+			"montauban ville bourbon",
+			"MONTAUBAN"
+		]
+	},
+	{
+		"value": "MONTBARD",
+		"synonyms": [
+			"MONTBARD",
+			"Montbard",
+			"montbard"
+		]
+	},
+	{
+		"value": "MONTDAUPHIN GUILLESTRE",
+		"synonyms": [
+			"MONTDAUPHIN GUILLESTRE",
+			"Montdauphin guillestre",
+			"montdauphin guillestre",
+			"MONTDAUPHIN"
+		]
+	},
+	{
+		"value": "MONTELIMAR GARE SNCF",
+		"synonyms": [
+			"MONTELIMAR GARE SNCF",
+			"Montelimar gare sncf",
+			"montelimar gare sncf",
+			"MONTELIMAR"
+		]
+	},
+	{
+		"value": "MONTPELLIER SAINT ROCH",
+		"synonyms": [
+			"MONTPELLIER SAINT ROCH",
+			"Montpellier saint roch",
+			"montpellier saint roch",
+			"MONTPELLIER"
+		]
+	},
+	{
+		"value": "MONTPELLIER SUD DE FRANCE",
+		"synonyms": [
+			"MONTPELLIER SUD DE FRANCE",
+			"Montpellier sud de france",
+			"montpellier sud de france",
+			"MONTPELLIER"
+		]
+	},
+	{
+		"value": "MORLAIX",
+		"synonyms": [
+			"MORLAIX",
+			"Morlaix",
+			"morlaix"
+		]
+	},
+	{
+		"value": "MOUCHARD",
+		"synonyms": [
+			"MOUCHARD",
+			"Mouchard",
+			"mouchard"
+		]
+	},
+	{
+		"value": "MOULINS SUR ALLIER",
+		"synonyms": [
+			"MOULINS SUR ALLIER",
+			"Moulins sur allier",
+			"moulins sur allier",
+			"MOULINS"
+		]
+	},
+	{
+		"value": "MOUTIERS SALINS BRIDES L BAINS",
+		"synonyms": [
+			"MOUTIERS SALINS BRIDES L BAINS",
+			"Moutiers salins brides l bains",
+			"moutiers salins brides l bains",
+			"MOUTIERS"
+		]
+	},
+	{
+		"value": "MULHOUSE VILLE",
+		"synonyms": [
+			"MULHOUSE VILLE",
+			"Mulhouse ville",
+			"mulhouse ville",
+			"MULHOUSE"
+		]
+	},
+	{
+		"value": "NANCY",
+		"synonyms": [
+			"NANCY",
+			"Nancy",
+			"nancy"
+		]
+	},
+	{
+		"value": "NANTES",
+		"synonyms": [
+			"NANTES",
+			"Nantes",
+			"nantes"
+		]
+	},
+	{
+		"value": "NARBONNE",
+		"synonyms": [
+			"NARBONNE",
+			"Narbonne",
+			"narbonne"
+		]
+	},
+	{
+		"value": "NEVERS",
+		"synonyms": [
+			"NEVERS",
+			"Nevers",
+			"nevers"
+		]
+	},
+	{
+		"value": "NICE VILLE",
+		"synonyms": [
+			"NICE VILLE",
+			"Nice ville",
+			"nice ville",
+			"NICE"
+		]
+	},
+	{
+		"value": "NIMES",
+		"synonyms": [
+			"NIMES",
+			"Nimes",
+			"nimes"
+		]
+	},
+	{
+		"value": "NIORT",
+		"synonyms": [
+			"NIORT",
+			"Niort",
+			"niort"
+		]
+	},
+	{
+		"value": "NURIEUX",
+		"synonyms": [
+			"NURIEUX",
+			"Nurieux",
+			"nurieux"
+		]
+	},
+	{
+		"value": "ORANGE",
+		"synonyms": [
+			"ORANGE",
+			"Orange",
+			"orange"
+		]
+	},
+	{
+		"value": "ORTHEZ",
+		"synonyms": [
+			"ORTHEZ",
+			"Orthez",
+			"orthez"
+		]
+	},
+	{
+		"value": "PAMIERS",
+		"synonyms": [
+			"PAMIERS",
+			"Pamiers",
+			"pamiers"
+		]
+	},
+	{
+		"value": "PARIS",
+		"synonyms": [
+			"PARIS",
+			"Paris",
+			"paris",
+			"PARIS"
+		]
+	},
+	{
+		"value": "PAU",
+		"synonyms": [
+			"PAU",
+			"Pau",
+			"pau"
+		]
+	},
+	{
+		"value": "PERPIGNAN",
+		"synonyms": [
+			"PERPIGNAN",
+			"Perpignan",
+			"perpignan"
+		]
+	},
+	{
+		"value": "PLOUARET TREGOR",
+		"synonyms": [
+			"PLOUARET TREGOR",
+			"Plouaret tregor",
+			"plouaret tregor",
+			"PLOUARET"
+		]
+	},
+	{
+		"value": "POITIERS",
+		"synonyms": [
+			"POITIERS",
+			"Poitiers",
+			"poitiers"
+		]
+	},
+	{
+		"value": "PORNICHET",
+		"synonyms": [
+			"PORNICHET",
+			"Pornichet",
+			"pornichet"
+		]
+	},
+	{
+		"value": "PORT VENDRES VILLE",
+		"synonyms": [
+			"PORT VENDRES VILLE",
+			"Port vendres ville",
+			"port vendres ville",
+			"PORT"
+		]
+	},
+	{
+		"value": "PORTE PUYMORENS",
+		"synonyms": [
+			"PORTE PUYMORENS",
+			"Porte puymorens",
+			"porte puymorens",
+			"PORTE"
+		]
+	},
+	{
+		"value": "QUIMPER",
+		"synonyms": [
+			"QUIMPER",
+			"Quimper",
+			"quimper"
+		]
+	},
+	{
+		"value": "QUIMPERLE",
+		"synonyms": [
+			"QUIMPERLE",
+			"Quimperle",
+			"quimperle"
+		]
+	},
+	{
+		"value": "RANG DU FLIERS VERTON",
+		"synonyms": [
+			"RANG DU FLIERS VERTON",
+			"Rang du fliers verton",
+			"rang du fliers verton",
+			"RANG"
+		]
+	},
+	{
+		"value": "REDON",
+		"synonyms": [
+			"REDON",
+			"Redon",
+			"redon"
+		]
+	},
+	{
+		"value": "REIMS",
+		"synonyms": [
+			"REIMS",
+			"Reims",
+			"reims"
+		]
+	},
+	{
+		"value": "REMIREMONT",
+		"synonyms": [
+			"REMIREMONT",
+			"Remiremont",
+			"remiremont"
+		]
+	},
+	{
+		"value": "RENNES",
+		"synonyms": [
+			"RENNES",
+			"Rennes",
+			"rennes"
+		]
+	},
+	{
+		"value": "RETHEL",
+		"synonyms": [
+			"RETHEL",
+			"Rethel",
+			"rethel"
+		]
+	},
+	{
+		"value": "RIOM CHATEL GUYON",
+		"synonyms": [
+			"RIOM CHATEL GUYON",
+			"Riom chatel guyon",
+			"riom chatel guyon",
+			"RIOM"
+		]
+	},
+	{
+		"value": "ROCAMADOUR PADIRAC",
+		"synonyms": [
+			"ROCAMADOUR PADIRAC",
+			"Rocamadour padirac",
+			"rocamadour padirac",
+			"ROCAMADOUR"
+		]
+	},
+	{
+		"value": "RODEZ",
+		"synonyms": [
+			"RODEZ",
+			"Rodez",
+			"rodez"
+		]
+	},
+	{
+		"value": "ROSPORDEN",
+		"synonyms": [
+			"ROSPORDEN",
+			"Rosporden",
+			"rosporden"
+		]
+	},
+	{
+		"value": "ROUBAIX",
+		"synonyms": [
+			"ROUBAIX",
+			"Roubaix",
+			"roubaix"
+		]
+	},
+	{
+		"value": "ROUEN RIVE DROITE",
+		"synonyms": [
+			"ROUEN RIVE DROITE",
+			"Rouen rive droite",
+			"rouen rive droite",
+			"ROUEN"
+		]
+	},
+	{
+		"value": "SABLE",
+		"synonyms": [
+			"SABLE",
+			"Sable",
+			"sable"
+		]
+	},
+	{
+		"value": "SALLANCHES COMBLOUX MEGEVE",
+		"synonyms": [
+			"SALLANCHES COMBLOUX MEGEVE",
+			"Sallanches combloux megeve",
+			"sallanches combloux megeve",
+			"SALLANCHES"
+		]
+	},
+	{
+		"value": "SARREBOURG",
+		"synonyms": [
+			"SARREBOURG",
+			"Sarrebourg",
+			"sarrebourg"
+		]
+	},
+	{
+		"value": "SAUMUR",
+		"synonyms": [
+			"SAUMUR",
+			"Saumur",
+			"saumur"
+		]
+	},
+	{
+		"value": "SAVERDUN",
+		"synonyms": [
+			"SAVERDUN",
+			"Saverdun",
+			"saverdun"
+		]
+	},
+	{
+		"value": "SAVERNE",
+		"synonyms": [
+			"SAVERNE",
+			"Saverne",
+			"saverne"
+		]
+	},
+	{
+		"value": "SEDAN",
+		"synonyms": [
+			"SEDAN",
+			"Sedan",
+			"sedan"
+		]
+	},
+	{
+		"value": "SELESTAT",
+		"synonyms": [
+			"SELESTAT",
+			"Selestat",
+			"selestat"
+		]
+	},
+	{
+		"value": "SETE",
+		"synonyms": [
+			"SETE",
+			"Sete",
+			"sete"
+		]
+	},
+	{
+		"value": "SOUILLAC",
+		"synonyms": [
+			"SOUILLAC",
+			"Souillac",
+			"souillac"
+		]
+	},
+	{
+		"value": "ST AVRE LA CHAMBRE",
+		"synonyms": [
+			"ST AVRE LA CHAMBRE",
+			"St avre la chambre",
+			"st avre la chambre"
+		]
+	},
+	{
+		"value": "ST BRIEUC",
+		"synonyms": [
+			"ST BRIEUC",
+			"St brieuc",
+			"st brieuc"
+		]
+	},
+	{
+		"value": "ST CHRISTOPHE",
+		"synonyms": [
+			"ST CHRISTOPHE",
+			"St christophe",
+			"st christophe"
+		]
+	},
+	{
+		"value": "ST DENIS PRES MARTEL",
+		"synonyms": [
+			"ST DENIS PRES MARTEL",
+			"St denis pres martel",
+			"st denis pres martel"
+		]
+	},
+	{
+		"value": "ST DIE DES VOSGES",
+		"synonyms": [
+			"ST DIE DES VOSGES",
+			"St die des vosges",
+			"st die des vosges"
+		]
+	},
+	{
+		"value": "ST ETIENNE CHATEAUCREUX",
+		"synonyms": [
+			"ST ETIENNE CHATEAUCREUX",
+			"St etienne chateaucreux",
+			"st etienne chateaucreux"
+		]
+	},
+	{
+		"value": "ST GERMAIN DES FOSSES",
+		"synonyms": [
+			"ST GERMAIN DES FOSSES",
+			"St germain des fosses",
+			"st germain des fosses"
+		]
+	},
+	{
+		"value": "ST GERVAIS LES BAINS LE FAYET",
+		"synonyms": [
+			"ST GERVAIS LES BAINS LE FAYET",
+			"St gervais les bains le fayet",
+			"st gervais les bains le fayet"
+		]
+	},
+	{
+		"value": "ST JEAN DE LUZ CIBOURE",
+		"synonyms": [
+			"ST JEAN DE LUZ CIBOURE",
+			"St jean de luz ciboure",
+			"st jean de luz ciboure"
+		]
+	},
+	{
+		"value": "ST JEAN DE MAURIENNE ARVAN",
+		"synonyms": [
+			"ST JEAN DE MAURIENNE ARVAN",
+			"St jean de maurienne arvan",
+			"st jean de maurienne arvan"
+		]
+	},
+	{
+		"value": "ST MAIXENT DEUX SEVRES",
+		"synonyms": [
+			"ST MAIXENT DEUX SEVRES",
+			"St maixent deux sevres",
+			"st maixent deux sevres"
+		]
+	},
+	{
+		"value": "ST MALO",
+		"synonyms": [
+			"ST MALO",
+			"St malo",
+			"st malo"
+		]
+	},
+	{
+		"value": "ST MICHEL VALLOIRE",
+		"synonyms": [
+			"ST MICHEL VALLOIRE",
+			"St michel valloire",
+			"st michel valloire"
+		]
+	},
+	{
+		"value": "ST NAZAIRE",
+		"synonyms": [
+			"ST NAZAIRE",
+			"St nazaire",
+			"st nazaire"
+		]
+	},
+	{
+		"value": "ST PIERRE DES CORPS",
+		"synonyms": [
+			"ST PIERRE DES CORPS",
+			"St pierre des corps",
+			"st pierre des corps"
+		]
+	},
+	{
+		"value": "ST RAPHAEL VALESCURE",
+		"synonyms": [
+			"ST RAPHAEL VALESCURE",
+			"St raphael valescure",
+			"st raphael valescure"
+		]
+	},
+	{
+		"value": "STRASBOURG",
+		"synonyms": [
+			"STRASBOURG",
+			"Strasbourg",
+			"strasbourg"
+		]
+	},
+	{
+		"value": "SURGERES",
+		"synonyms": [
+			"SURGERES",
+			"Surgeres",
+			"surgeres"
+		]
+	},
+	{
+		"value": "TARASCON SUR ARIEGE",
+		"synonyms": [
+			"TARASCON SUR ARIEGE",
+			"Tarascon sur ariege",
+			"tarascon sur ariege",
+			"TARASCON"
+		]
+	},
+	{
+		"value": "TARBES",
+		"synonyms": [
+			"TARBES",
+			"Tarbes",
+			"tarbes"
+		]
+	},
+	{
+		"value": "TGV HAUTE PICARDIE",
+		"synonyms": [
+			"TGV HAUTE PICARDIE",
+			"Tgv haute picardie",
+			"tgv haute picardie"
+		]
+	},
+	{
+		"value": "THIONVILLE",
+		"synonyms": [
+			"THIONVILLE",
+			"Thionville",
+			"thionville"
+		]
+	},
+	{
+		"value": "THONON LES BAINS",
+		"synonyms": [
+			"THONON LES BAINS",
+			"Thonon les bains",
+			"thonon les bains",
+			"THONON"
+		]
+	},
+	{
+		"value": "TOULON",
+		"synonyms": [
+			"TOULON",
+			"Toulon",
+			"toulon"
+		]
+	},
+	{
+		"value": "TOULOUSE MATABIAU",
+		"synonyms": [
+			"TOULOUSE MATABIAU",
+			"Toulouse matabiau",
+			"toulouse matabiau",
+			"TOULOUSE"
+		]
+	},
+	{
+		"value": "TOURCOING",
+		"synonyms": [
+			"TOURCOING",
+			"Tourcoing",
+			"tourcoing"
+		]
+	},
+	{
+		"value": "TOURS",
+		"synonyms": [
+			"TOURS",
+			"Tours",
+			"tours"
+		]
+	},
+	{
+		"value": "UZERCHE",
+		"synonyms": [
+			"UZERCHE",
+			"Uzerche",
+			"uzerche"
+		]
+	},
+	{
+		"value": "VALENCE TGV RHONE ALPES SUD",
+		"synonyms": [
+			"VALENCE TGV RHONE ALPES SUD",
+			"Valence tgv rhone alpes sud",
+			"valence tgv rhone alpes sud",
+			"VALENCE"
+		]
+	},
+	{
+		"value": "VALENCE VILLE",
+		"synonyms": [
+			"VALENCE VILLE",
+			"Valence ville",
+			"valence ville",
+			"VALENCE"
+		]
+	},
+	{
+		"value": "VALENCIENNES",
+		"synonyms": [
+			"VALENCIENNES",
+			"Valenciennes",
+			"valenciennes"
+		]
+	},
+	{
+		"value": "VANNES",
+		"synonyms": [
+			"VANNES",
+			"Vannes",
+			"vannes"
+		]
+	},
+	{
+		"value": "VENDOME VILLIERS SUR LOIR",
+		"synonyms": [
+			"VENDOME VILLIERS SUR LOIR",
+			"Vendome villiers sur loir",
+			"vendome villiers sur loir",
+			"VENDOME"
+		]
+	},
+	{
+		"value": "VERSAILLES CHANTIERS",
+		"synonyms": [
+			"VERSAILLES CHANTIERS",
+			"Versailles chantiers",
+			"versailles chantiers",
+			"VERSAILLES"
+		]
+	},
+	{
+		"value": "VEYNES DEVOLUY",
+		"synonyms": [
+			"VEYNES DEVOLUY",
+			"Veynes devoluy",
+			"veynes devoluy",
+			"VEYNES"
+		]
+	},
+	{
+		"value": "VICHY",
+		"synonyms": [
+			"VICHY",
+			"Vichy",
+			"vichy"
+		]
+	},
+	{
+		"value": "VITRE",
+		"synonyms": [
+			"VITRE",
+			"Vitre",
+			"vitre"
+		]
+	},
+	{
+		"value": "VITRY LE FRANCOIS GARE",
+		"synonyms": [
+			"VITRY LE FRANCOIS GARE",
+			"Vitry le francois gare",
+			"vitry le francois gare",
+			"VITRY"
+		]
+	},
+	{
+		"value": "VIVIEZ DECAZEVILLE",
+		"synonyms": [
+			"VIVIEZ DECAZEVILLE",
+			"Viviez decazeville",
+			"viviez decazeville",
+			"VIVIEZ"
+		]
+	}
+]

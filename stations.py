@@ -6,11 +6,11 @@
 #    By: bwaterlo <bwaterlo@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/01/08 19:39:21 by bwaterlo          #+#    #+#              #
-#    Updated: 2019/01/15 11:21:31 by bwaterlo         ###   ########.fr        #
+#    Updated: 2019/01/24 11:06:05 by bwaterlo         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 stations_db = {
 	"PARIS": "4916",
-	"CHAMBERY": "1339",
+	"CHAMBERY CHALLES LES EAUX": "1339",
 }

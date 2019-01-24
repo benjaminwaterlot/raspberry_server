@@ -6,7 +6,7 @@
 #    By: bwaterlo <bwaterlo@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/01/22 11:56:22 by bwaterlo          #+#    #+#              #
-#    Updated: 2019/01/22 19:50:17 by bwaterlo         ###   ########.fr        #
+#    Updated: 2019/01/23 09:41:09 by bwaterlo         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -31,24 +31,24 @@ def handle_verification():
 		return "ERROR"
 
 
-@app.route('/bot', methods=['POST'])
-def handle_message():
-	data = request.get_json()
-	print("MESSAGE RECEIVED : ")
-	print(data)
-	if data['object'] == 'page':
-		for entry in data['entry']:
-			for messaging_event in entry['messaging']:
-				if messaging_event.get('message'):
-					sender_id = messaging_event['sender']['id']
-		requests.post("https://graph.facebook.com/v2.6/me/messages",
-			params={"access_token": PAGE_TOKEN},
-			headers={"Content-Type": "application/json"},
-			data= json.dumps({
-				"recipient": {"id": sender_id},
-				"message": {"text": "JARVIS !"}
-			}))
-	return "Okay, bro !"
+# @app.route('/bot', methods=['POST'])
+# def handle_message():
+# 	data = request.get_json()
+# 	print("MESSAGE RECEIVED : ")
+# 	print(data)
+# 	if data['object'] == 'page':
+# 		for entry in data['entry']:
+# 			for messaging_event in entry['messaging']:
+# 				if messaging_event.get('message'):
+# 					sender_id = messaging_event['sender']['id']
+# 		requests.post("https://graph.facebook.com/v2.6/me/messages",
+# 			params={"access_token": PAGE_TOKEN},
+# 			headers={"Content-Type": "application/json"},
+# 			data= json.dumps({
+# 				"recipient": {"id": sender_id},
+# 				"message": {"text": "JARVIS !"}
+# 			}))
+# 	return "Okay, bro !"
 
 @app.route('/webhook', methods=['POST'])
 def message_from_jarvis():
