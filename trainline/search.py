@@ -6,15 +6,15 @@
 #    By: bwaterlo <bwaterlo@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/01/15 10:37:06 by bwaterlo          #+#    #+#              #
-#    Updated: 2019/01/24 15:49:41 by bwaterlo         ###   ########.fr        #
+#    Updated: 2019/01/24 16:35:03 by bwaterlo         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
+import datetime as dt
 import random
 import json
 
 import requests
-import datetime as dt
 
 import logs
 from resources.stations import stations_db
@@ -55,15 +55,6 @@ def get_search_body(params):
 		]
 	}
 	return {"search": search_body}
-
-
-def format_result(hours):
-	array = []
-	result = ""
-	for hour in hours:
-		array += hour[11:16]
-		array += '\n'
-	return result.join(array)
 
 
 def log_trains(trains_all, trains_tgvmax, trains_buyable):

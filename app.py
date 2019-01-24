@@ -6,7 +6,7 @@
 #    By: bwaterlo <bwaterlo@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/01/22 11:56:22 by bwaterlo          #+#    #+#              #
-#    Updated: 2019/01/24 15:47:10 by bwaterlo         ###   ########.fr        #
+#    Updated: 2019/01/24 17:00:10 by bwaterlo         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -74,15 +74,38 @@ def message_from_jarvis():
 		if len(trains_found) == 0:
 			response['fulfillmentText'] = "Désolé, je n'ai rien trouvé :("
 		else:
-			response['fulfillmentMessages'] = [{
-				"platform": "FACEBOOK",
-				"quick_replies": {
-					'title': f"*{len(trains_found)} TGVmax dispo*\n"
-							 f"_({params['depart']} > {params['arrival']}, le {padded(params['date'].day)} "
-							 f"entre {padded(params['time_start'].hour)}h{padded(params['time_start'].minute)}"
-							 f" et {padded(params['time_end'].hour)}h{padded(params['time_end'].minute)})_",
-					"quickReplies": trains_found
+			replies = [{'content_type': 'text', 'title': train, 'payload': f"coucou cest {train}"} for train in trains_found]
+			response['payload'] = {
+				'facebook': {
+					'text': f"*{len(trains_found)} TGVmax dispo*\n"
+							f"_({params['depart']} > {params['arrival']}, le {padded(params['date'].day)} "
+							f"entre {padded(params['time_start'].hour)}h{padded(params['time_start'].minute)}"
+							f" et {padded(params['time_end'].hour)}h{padded(params['time_end'].minute)})_",
+					"quick_replies": replies
 				}
-			}]
+			}
+			# 'facebook': {
+			# 	"text": "Here is a quick reply!",
+			# 	"quick_replies":[
+			# 	{
+			# 		"content_type":"text",
+			# 		"title":"Search",
+			# 		"payload":"<POSTBACK_PAYLOAD>",
+			# 		"image_url":"http://example.com/img/red.png"
+			# 	},
+			# 	{
+			# 		"content_type":"location"
+			# 	}
+			# 	]
+			# }
+			# response['fulfillmentMessages'] = [{
+			# 	"platform": "FACEBOOK",
+			# 	"quick_replies": {
+			# 		'title': f"*{len(trains_found)} TGVmax dispo*\n"
+			# 				 f"_({params['depart']} > {params['arrival']}, le {padded(params['date'].day)} "
+			# 				 f"entre {padded(params['time_start'].hour)}h{padded(params['time_start'].minute)}"
+			# 				 f" et {padded(params['time_end'].hour)}h{padded(params['time_end'].minute)})_",
+			# 			"quickReplies": trains_found
+			# 	}}]
 		return json.dumps(response)
 	else: exit()
