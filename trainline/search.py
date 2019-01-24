@@ -1,12 +1,12 @@
 # **************************************************************************** #
 #                                                                              #
 #                                                         :::      ::::::::    #
-#    trainline.py                                       :+:      :+:    :+:    #
+#    search.py                                          :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
 #    By: bwaterlo <bwaterlo@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/01/15 10:37:06 by bwaterlo          #+#    #+#              #
-#    Updated: 2019/01/24 14:26:50 by bwaterlo         ###   ########.fr        #
+#    Updated: 2019/01/24 15:49:41 by bwaterlo         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,8 +17,9 @@ import requests
 import datetime as dt
 
 import logs
-from stations import stations_db
+from resources.stations import stations_db
 from resources import months
+from utils.text import padded
 
 search_url = "https://www.trainline.eu/api/v5_1/search"
 
@@ -65,20 +66,16 @@ def format_result(hours):
 	return result.join(array)
 
 
-def save_to_logs(trains_all, trains_tgvmax):
-	logs.debug("Saving the results to disk")
-	with open("results/trains_all.json", "w+") as trains_all_file:
-		trains_all_file.write(json.dumps(trains_all))
-	with open("results/trains_tgvmax.json", "w+") as trains_tgvmax_file:
-		trains_tgvmax_file.write(json.dumps(trains_tgvmax))
-
-
 def log_trains(trains_all, trains_tgvmax, trains_buyable):
 	logs.message(f"{len(trains_all)} TRAINS FOUND.")
 	logs.message(f"{len(trains_tgvmax)} TGVMAX FOUND.")
 	logs.message(f"{len(trains_buyable)} AVAILABLE TGVMAX FOUND.")
 	for train in trains_tgvmax:
 		logs.message(f"> {str(train['departure_date'])} for {str(train['cents'] / 100)}€.")
+	with open("results/trains_all.json", "w+") as trains_all_file:
+		trains_all_file.write(json.dumps(trains_all))
+	with open("results/trains_tgvmax.json", "w+") as trains_tgvmax_file:
+		trains_tgvmax_file.write(json.dumps(trains_tgvmax))
 
 
 def search(session, params):
@@ -99,7 +96,7 @@ def search(session, params):
 		trains_buyable = [train for train in trains_tgvmax if train['is_sellable'] == True]
 		keep_hours = [dt.datetime.fromisoformat(train['departure_date']) for train in trains_buyable]
 		log_trains(trains_all, trains_tgvmax, trains_buyable)
-		trains = [f"{d.hour}h{d.minute} ({d.day} {months.months[d.month]})" for d in keep_hours]
+		trains = [f"{padded(d.hour)}h{padded(d.minute)} ({padded(d.day)} {months.months[d.month]})" for d in keep_hours]
 		for train in trains:
 			if not train in result:
 				result.append(train)

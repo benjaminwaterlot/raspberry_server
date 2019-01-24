@@ -6,16 +6,17 @@
 #    By: bwaterlo <bwaterlo@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/01/22 11:56:22 by bwaterlo          #+#    #+#              #
-#    Updated: 2019/01/24 14:31:22 by bwaterlo         ###   ########.fr        #
+#    Updated: 2019/01/24 15:47:10 by bwaterlo         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 from flask import Flask, request
 import requests
 import json
-import trainline.trainline as trainline
+import trainline.search
 import datetime as dt
 from requests_futures.sessions import FuturesSession
+from utils.text import padded
 
 app = Flask(__name__)
 
@@ -38,6 +39,11 @@ session_headers = {
 	"content-type": "application/json; charset=UTF-8",
 }
 
+@app.before_first_request
+def launch_session():
+	app.session = FuturesSession()
+	app.session.headers.update(session_headers)
+
 @app.route('/bot', methods=['GET'])
 def handle_verification():
 	if (request.args.get('hub.verify_token', '') == VERIFY_TOKEN):
@@ -51,12 +57,8 @@ def handle_verification():
 @app.route('/webhook', methods=['POST'])
 def message_from_jarvis():
 	body = request.get_json()
-	session = FuturesSession()
-	session.headers.update(session_headers)
 	print("THIS IS THE REQUEST RECEIVED :")
 	print(body)
-	with open('logs/request_from_dialogflow.json', 'w+') as log:
-		log.write(json.dumps(body))
 	query = body['queryResult']
 	if 'intent' in query and query['intent']['displayName'] == 'search_train':
 		query_params = query['parameters']
@@ -68,17 +70,17 @@ def message_from_jarvis():
 			'time_end': dt.datetime.fromisoformat(query_params['time_period']['endTime']).time(),
 		}
 		response = {}
-		trains_found = trainline.search(session, params)
+		trains_found = trainline.search.search(app.session, params)
 		if len(trains_found) == 0:
 			response['fulfillmentText'] = "Désolé, je n'ai rien trouvé :("
 		else:
 			response['fulfillmentMessages'] = [{
 				"platform": "FACEBOOK",
 				"quick_replies": {
-					'title': f"*Voilà, j'en ai trouvé {len(trains_found)} !*\n"
-							 f"({params['depart']} > {params['arrival']}, le {params['date'].day}"
-							 f"entre {params['time_start'].hour}h{params['time_start'].minute}"
-							 f" et {params['time_end'].hour}h{params['time_end'].minute})",
+					'title': f"*{len(trains_found)} TGVmax dispo*\n"
+							 f"_({params['depart']} > {params['arrival']}, le {padded(params['date'].day)} "
+							 f"entre {padded(params['time_start'].hour)}h{padded(params['time_start'].minute)}"
+							 f" et {padded(params['time_end'].hour)}h{padded(params['time_end'].minute)})_",
 					"quickReplies": trains_found
 				}
 			}]
