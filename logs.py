@@ -6,11 +6,9 @@
 #    By: bwaterlo <bwaterlo@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/01/08 19:11:04 by bwaterlo          #+#    #+#              #
-#    Updated: 2019/01/15 10:40:09 by bwaterlo         ###   ########.fr        #
+#    Updated: 2019/01/24 15:26:00 by bwaterlo         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
-
-from utils import is_debug
 
 # COLORS FOR PRINTING ERRORS
 class _colors:
@@ -41,8 +39,7 @@ def _print_debug(message):
 	return None
 
 def	debug(message):
-	if (is_debug):
-		_print_debug(message)
+	_print_debug(message)
 
 def message(message):
 	print(_colors.OKGREEN + message + _colors.END)

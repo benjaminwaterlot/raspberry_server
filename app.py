@@ -6,7 +6,7 @@
 #    By: bwaterlo <bwaterlo@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/01/22 11:56:22 by bwaterlo          #+#    #+#              #
-#    Updated: 2019/01/24 13:23:58 by bwaterlo         ###   ########.fr        #
+#    Updated: 2019/01/24 14:31:22 by bwaterlo         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -52,21 +52,18 @@ def handle_verification():
 def message_from_jarvis():
 	body = request.get_json()
 	session = FuturesSession()
-	# session = requests.Session()
 	session.headers.update(session_headers)
 	print("THIS IS THE REQUEST RECEIVED :")
 	print(body)
 	with open('logs/request_from_dialogflow.json', 'w+') as log:
 		log.write(json.dumps(body))
 	query = body['queryResult']
-	if query['intent']['displayName'] == 'search_train':
+	if 'intent' in query and query['intent']['displayName'] == 'search_train':
 		query_params = query['parameters']
 		params = {
 			'date': dt.datetime.fromisoformat(query_params['date']).date(),
 			'depart': query_params['from'],
 			'arrival': query_params['to'],
-			'start': 18,
-			'end': 23,
 			'time_start': dt.datetime.fromisoformat(query_params['time_period']['startTime']).time(),
 			'time_end': dt.datetime.fromisoformat(query_params['time_period']['endTime']).time(),
 		}
@@ -78,7 +75,10 @@ def message_from_jarvis():
 			response['fulfillmentMessages'] = [{
 				"platform": "FACEBOOK",
 				"quick_replies": {
-					'title': f"Voilà, j'en ai trouvé {len(trains_found)} !",
+					'title': f"*Voilà, j'en ai trouvé {len(trains_found)} !*\n"
+							 f"({params['depart']} > {params['arrival']}, le {params['date'].day}"
+							 f"entre {params['time_start'].hour}h{params['time_start'].minute}"
+							 f" et {params['time_end'].hour}h{params['time_end'].minute})",
 					"quickReplies": trains_found
 				}
 			}]

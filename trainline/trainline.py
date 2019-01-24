@@ -6,7 +6,7 @@
 #    By: bwaterlo <bwaterlo@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/01/15 10:37:06 by bwaterlo          #+#    #+#              #
-#    Updated: 2019/01/24 13:28:01 by bwaterlo         ###   ########.fr        #
+#    Updated: 2019/01/24 14:26:50 by bwaterlo         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -83,14 +83,15 @@ def log_trains(trains_all, trains_tgvmax, trains_buyable):
 
 def search(session, params):
 	result = []
-	future_requests = []
-	while params['time_start'] < params['time_end']:
-		future_requests.append(session.post(search_url, json=get_search_body(params), headers=get_search_headers()))
-		if params['time_start'].hour >= 21:
+	pending_requests = []
+	looping_start = params['time_start']
+	while looping_start < params['time_end']:
+		pending_requests.append(session.post(search_url, json=get_search_body(params), headers=get_search_headers()))
+		if looping_start.hour >= 21:
 			break
-		params['time_start'] = params['time_start'].replace(hour=params['time_start'].hour + 3)
+		looping_start = looping_start.replace(hour=looping_start.hour + 3)
 	
-	for request in future_requests:
+	for request in pending_requests:
 		response = request.result()
 		response.raise_for_status()
 		trains_all = response.json()['folders']
@@ -100,5 +101,6 @@ def search(session, params):
 		log_trains(trains_all, trains_tgvmax, trains_buyable)
 		trains = [f"{d.hour}h{d.minute} ({d.day} {months.months[d.month]})" for d in keep_hours]
 		for train in trains:
-			result.append(train)
+			if not train in result:
+				result.append(train)
 	return result
