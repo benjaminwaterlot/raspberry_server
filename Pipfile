@@ -5,14 +5,12 @@ verify_ssl = true
 
 [dev-packages]
 pylint = "*"
-autopep8 = "*"
 
 [packages]
 requests = "*"
 flask = "*"
 pylint = "*"
 fbchat = "*"
-autopep8 = "*"
 requests-futures = "*"
 
 [requires]

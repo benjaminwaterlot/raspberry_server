@@ -84,28 +84,5 @@ def message_from_jarvis():
 					"quick_replies": replies
 				}
 			}
-			# 'facebook': {
-			# 	"text": "Here is a quick reply!",
-			# 	"quick_replies":[
-			# 	{
-			# 		"content_type":"text",
-			# 		"title":"Search",
-			# 		"payload":"<POSTBACK_PAYLOAD>",
-			# 		"image_url":"http://example.com/img/red.png"
-			# 	},
-			# 	{
-			# 		"content_type":"location"
-			# 	}
-			# 	]
-			# }
-			# response['fulfillmentMessages'] = [{
-			# 	"platform": "FACEBOOK",
-			# 	"quick_replies": {
-			# 		'title': f"*{len(trains_found)} TGVmax dispo*\n"
-			# 				 f"_({params['depart']} > {params['arrival']}, le {padded(params['date'].day)} "
-			# 				 f"entre {padded(params['time_start'].hour)}h{padded(params['time_start'].minute)}"
-			# 				 f" et {padded(params['time_end'].hour)}h{padded(params['time_end'].minute)})_",
-			# 			"quickReplies": trains_found
-			# 	}}]
 		return json.dumps(response)
 	else: exit()
